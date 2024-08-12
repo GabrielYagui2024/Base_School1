@@ -164,6 +164,8 @@ select
 	Round(avg(nota),2) as media_total
 from base_school_notas;
 ```
+
+
 - AVG(nota): Calcula a média das notas na coluna nota.
 - ROUND(..., 2): Arredonda o resultado da média para duas casas decimais.
 - AS media_total: Dá um alias (media_total) ao resultado da média para facilitar a leitura dos resultados.
@@ -199,7 +201,7 @@ FROM
 WHERE 
     ativo = TRUE;
 ```
-![media_notas](https://github.com/user-attachments/assets/ab3ab195-adc3-4874-a36c-364cebb61206)
+![Media_idade_alunos](https://github.com/user-attachments/assets/8086ff7b-16e1-4130-aa75-86576a7cd45a)
 
 - ROUND(AVG(TIMESTAMPDIFF(YEAR, data_nascimento, CURDATE())), 0) AS IDADE_MEDIA: Calcula a média das idades dos alunos ativos e arredonda o resultado para o número inteiro mais próximo.
 - TIMESTAMPDIFF(YEAR, data_nascimento, CURDATE()): Calcula a diferença em anos entre a data de nascimento e a data atual.
@@ -219,6 +221,8 @@ FROM
     LEFT JOIN base_school_cursos c 
         ON n.id_curso = c.id;
 ```
+![alunos_notas](https://github.com/user-attachments/assets/4d1e8c50-9768-4c70-8112-c3e7b9da1b3f)
+
 - a.nome AS aluno: Seleciona o nome do aluno e o renomeia como aluno.
 - c.nome AS curso: Seleciona o nome do curso e o renomeia como curso.
 - n.nota: Seleciona a nota.
@@ -245,6 +249,7 @@ FROM
 GROUP BY 
     c.nome;
 ```
+![curso_quantidade_aluno](https://github.com/user-attachments/assets/4855a91e-7bfa-4c59-8dd0-a4f5ffa538ef)
 
 - c.nome AS curso: Seleciona o nome do curso e o renomeia como curso.
 - COUNT(n.id_aluno) AS numero_alunos: Conta o número de alunos associados a cada curso e o renomeia como numero_alunos.
@@ -268,6 +273,8 @@ FROM
 GROUP BY 
     ativo;
 ```
+![Professores_situacao](https://github.com/user-attachments/assets/138ceae4-5f3b-49c3-8e1a-9e248cf811a7)
+
 - CASE: Estrutura condicional que avalia o valor da coluna ativo e retorna 'ATIVO' se o valor for 1, e 'INATIVO' caso contrário.
 - END AS SITUACAO_PROFESSOR: Renomeia o resultado da estrutura condicional como SITUACAO_PROFESSOR.
 - COUNT(*) AS quantidade: Conta o número de registros em cada grupo e o renomeia como quantidade.
@@ -286,6 +293,7 @@ FROM
 WHERE 
     ativo = 1;
 ```
+![maximo_minimo_salario](https://github.com/user-attachments/assets/3db9d2aa-5f08-4f9a-84d6-f303ec922804)
 
 - MAX(salario) AS salario_maximo: Calcula o valor máximo da coluna salario e o renomeia como salario_maximo.
 - MIN(salario) AS salario_minimo: Calcula o valor mínimo da coluna salario e o renomeia como salario_minimo.
@@ -302,6 +310,8 @@ FROM
 WHERE 
     ativo = 1;
 ```
+
+![media_salarial_professor](https://github.com/user-attachments/assets/32a7cd42-6bba-437c-8c0e-44dbfbb07613)
 
 ROUND(AVG(salario)) AS media_salarial: Calcula a média dos salários e arredonda o resultado para o número inteiro mais próximo. O resultado é renomeado como media_salarial.
 
@@ -325,8 +335,9 @@ HAVING
         WHERE 
             ativo = 1
     );
-![Media_salarial](https://github.com/user-attachments/assets/c11168a7-e5a6-46e5-9478-31b22f5eb212)
 ```
+![Media_salarial](https://github.com/user-attachments/assets/c11168a7-e5a6-46e5-9478-31b22f5eb212)
+
 - SELECT nome, salario: Seleciona as colunas nome e salario da tabela.
 - GROUP BY nome, salario: Agrupa os registros pelas colunas nome e salario. 
 - HAVING salario >: Filtra os grupos para incluir apenas aqueles em que o salário é maior do que a média calculada na subconsulta.
@@ -366,12 +377,7 @@ caso consiga entender e analisar quais motivos estão levando alguns alunos a fi
 - Em relação aos salários conseguimos notas que não temos uma discrepância muito grande em relação ao salários, a diferença maxima fica em R$ 1.000
  e vemos que a maioria dos professores estão com salários a cima de média, entre os professores ativos.
 
-![alunos_notas](https://github.com/user-attachments/assets/4d1e8c50-9768-4c70-8112-c3e7b9da1b3f)
-![curso_quantidade_aluno](https://github.com/user-attachments/assets/4855a91e-7bfa-4c59-8dd0-a4f5ffa538ef)
-![maximo_minimo_salario](https://github.com/user-attachments/assets/3db9d2aa-5f08-4f9a-84d6-f303ec922804)
-![Media_idade_alunos](https://github.com/user-attachments/assets/8086ff7b-16e1-4130-aa75-86576a7cd45a)
-![media_notas](https://github.com/user-attachments/assets/df8cbf0a-9234-4197-87cf-edac10381978)
 
 
-![Professores_situacao](https://github.com/user-attachments/assets/138ceae4-5f3b-49c3-8e1a-9e248cf811a7)
-![situacao_ativo_inativo](https://github.com/user-attachments/assets/a6f94afc-d249-442f-b408-cc33b52c257a)
+
+
