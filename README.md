@@ -164,7 +164,7 @@ select
 	Round(avg(nota),2) as media_total
 from base_school_notas;
 ```
-
+![media_nota](https://github.com/user-attachments/assets/8a7d0747-3df8-4e5c-81cc-889a701ee0c6)
 
 - AVG(nota): Calcula a média das notas na coluna nota.
 - ROUND(..., 2): Arredonda o resultado da média para duas casas decimais.
