@@ -187,7 +187,7 @@ HAVING
     );
 ```
 
-![Quantidade de participantes por idade](https://github.com/EryckNoronha/dados-enem/blob/main/Imagens/Idade_dos_participantes.png)
+![Quantidade de participantes por idade](https://github.com/user-attachments/assets/ab3ab195-adc3-4874-a36c-364cebb61206)
 
  ###### Vamos calcular a média de idades do alunos da escola 
 
