@@ -187,7 +187,7 @@ HAVING
     );
 ```
 
-![Quantidade de participantes por idade](https://github.com/user-attachments/assets/ab3ab195-adc3-4874-a36c-364cebb61206)
+![Media alunos abaixo ](https://github.com/user-attachments/assets/ab3ab195-adc3-4874-a36c-364cebb61206)
 
  ###### Vamos calcular a média de idades do alunos da escola 
 
@@ -199,6 +199,8 @@ FROM
 WHERE 
     ativo = TRUE;
 ```
+![media_notas](https://github.com/user-attachments/assets/ab3ab195-adc3-4874-a36c-364cebb61206)
+
 - ROUND(AVG(TIMESTAMPDIFF(YEAR, data_nascimento, CURDATE())), 0) AS IDADE_MEDIA: Calcula a média das idades dos alunos ativos e arredonda o resultado para o número inteiro mais próximo.
 - TIMESTAMPDIFF(YEAR, data_nascimento, CURDATE()): Calcula a diferença em anos entre a data de nascimento e a data atual.
 - WHERE ativo = TRUE: Filtra para incluir apenas os alunos que estão ativos.
