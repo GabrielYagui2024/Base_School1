@@ -325,6 +325,7 @@ HAVING
         WHERE 
             ativo = 1
     );
+![Media_salarial](https://github.com/user-attachments/assets/c11168a7-e5a6-46e5-9478-31b22f5eb212)
 ```
 - SELECT nome, salario: Seleciona as colunas nome e salario da tabela.
 - GROUP BY nome, salario: Agrupa os registros pelas colunas nome e salario. 
@@ -346,6 +347,8 @@ FROM
     LEFT JOIN base_school_cursos c 
         ON p.id = c.id_professor;
 ```
+![professor_materia_salario](https://github.com/user-attachments/assets/6039818e-14f2-483b-a686-6aada272df41)
+
 - p.nome AS professor: Seleciona o nome do professor e o renomeia como professor.
 - c.nome AS curso: Seleciona o nome do curso e o renomeia como curso.
 - CONCAT('R$ ', p.salario) AS salario_formatado: Formata o salário adicionando o prefixo 'R$ ' e renomeia o resultado como salario_formatado.
@@ -363,3 +366,12 @@ caso consiga entender e analisar quais motivos estão levando alguns alunos a fi
 - Em relação aos salários conseguimos notas que não temos uma discrepância muito grande em relação ao salários, a diferença maxima fica em R$ 1.000
  e vemos que a maioria dos professores estão com salários a cima de média, entre os professores ativos.
 
+![alunos_notas](https://github.com/user-attachments/assets/4d1e8c50-9768-4c70-8112-c3e7b9da1b3f)
+![curso_quantidade_aluno](https://github.com/user-attachments/assets/4855a91e-7bfa-4c59-8dd0-a4f5ffa538ef)
+![maximo_minimo_salario](https://github.com/user-attachments/assets/3db9d2aa-5f08-4f9a-84d6-f303ec922804)
+![Media_idade_alunos](https://github.com/user-attachments/assets/8086ff7b-16e1-4130-aa75-86576a7cd45a)
+![media_notas](https://github.com/user-attachments/assets/df8cbf0a-9234-4197-87cf-edac10381978)
+
+
+![Professores_situacao](https://github.com/user-attachments/assets/138ceae4-5f3b-49c3-8e1a-9e248cf811a7)
+![situacao_ativo_inativo](https://github.com/user-attachments/assets/a6f94afc-d249-442f-b408-cc33b52c257a)
